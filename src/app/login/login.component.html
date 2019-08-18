@@ -1,0 +1,17 @@
+<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <fieldset class='border w-50 p-3 mx-auto'>
+    <legend>Login</legend>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" formControlName="username" placeholder="Enter Username"/>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" formControlName="password" placeholder="Password" autocomplete="new-password"/>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button> <br>
+      <small>Don't have an account? Register <a routerLink='/register'>here</a></small>
+  </fieldset>
+</form>
+

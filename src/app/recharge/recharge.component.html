@@ -1,0 +1,30 @@
+<p>recharge works!</p>
+
+<div *ngIf="plan">
+  <h3>Selected Plan</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Validity</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ plan.name }}</td>
+        <td>{{ plan.price }}</td>
+        <td>{{ plan.validity }}</td>
+        <td>{{ plan.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <form class='border p-3'>
+    <div class="form-group">
+      <label for="enterMobileNumber">Enter Mobile Number</label>
+      <input type="tel" class="form-control" id="enterMobileNumber" placeholder="Enter 10-Digit Mobile Number"/>
+    </div>
+    <button class='btn btn-secondary'>Recharge</button>
+  </form>
+</div>

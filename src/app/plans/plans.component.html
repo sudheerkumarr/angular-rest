@@ -1,0 +1,24 @@
+<p>plans works!</p>
+<div class='w-50 mx-auto mt-5'>
+<h2> Recharge Packs </h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Plan Name</th>
+      <th>Price</th>
+      <th>Validity</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let plan of plans">
+    <tr>
+      <td>{{ plan.name }}</td>
+      <td>{{ plan.price }}</td>
+      <td>{{ plan.validity }}</td>
+      <td>{{ plan.description }}</td>
+      <td><button (click)="sendPlan(plan)">Buy</button></td>
+    </tr>
+  </tbody>
+</table>
+<app-recharge></app-recharge>
+</div>
